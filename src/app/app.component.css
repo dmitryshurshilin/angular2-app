@@ -1,8 +1,105 @@
 html, body{
-  height: 100%;
-  font-family: Arial, Helvetica, sans-serif
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+}
+html {
+    overflow-y: scroll;
 }
 
-span.active {
-  background-color: gray;
+header, nav, main, div, span, footer {
+    box-sizing: border-box;
+}
+
+
+/**
+    Main navigation
+ */
+.navigation {
+    width: 1140px;
+    margin: 0 auto;
+ }
+    .navigation__items {
+        margin: 0 -15px;
+        padding: 0;
+        list-style: none;
+    }
+        .navigation__item {
+            display: inline-block;
+        }
+            .navigation__link {
+                display: inline-block;
+                padding: 15px;
+                font-weight: 500;
+                color: #3f51b5;
+                text-decoration: none;
+            }
+                .navigation__link:hover {
+                    opacity: .85;
+                }
+
+/**
+    App header
+*/
+.app-header {
+    padding: 20px 40px;
+    background-color: #3f51b5;
+}
+    .app-header__content {
+        width: 1140px;
+        margin: 0 auto;
+    }
+        .app-header__logo {
+            font-size: 26px;
+            font-weight: 700;
+            color: #fff;
+        }
+            .app-header__logo span {
+                font-weight: 300;
+            }
+        .app-header__link {
+            color: #fff;
+            text-decoration: none;
+        }
+
+/**
+    Main app content section
+*/
+.app-main {
+    min-height: calc(100vh - 184px); /* 184px is sum of header, navigation section and footer heights */
+    padding: 20px 40px;
+}
+    .app-main__content {
+        width: 1140px;
+        margin: 0 auto;
+    }
+        .app-main__content h1 {
+            margin: .25em 0;
+            font-size: 36px;
+            font-weight: 300;
+        }
+
+
+/**
+    App state
+*/
+.app-state {
+    width: 1140px;
+    margin: 20px auto;
+    padding: 20px;
+    box-sizing: border-box;
+    background: #efefef;
+    border: 1px solid #ddd;
+}
+
+/**
+    App footer
+*/
+.app-footer {
+    padding: 20px;
+    background-color: #34495e;
+    color: #fff;
+    text-align: center;
 }
