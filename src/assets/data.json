@@ -1,0 +1,50 @@
+[
+    {
+      "id": "1",
+      "author": "Pablo Deeleman",
+      "title": "Learning Angular 2",
+      "genre": "Technology",
+      "year": "2016",
+      "isAvailable": "true"
+    },
+    {
+      "id": "2",
+      "author": "Chandermani Arora, Kevin Hennessy",
+      "title": "Angular 2 By Example",
+      "genre": "Technology",
+      "year": "2016",
+      "isAvailable": "true"
+    },
+    {
+      "id": "3",
+      "author": "Vinci Rufus",
+      "title": "Angular 2 Blueprints",
+      "genre": "Technology",
+      "year": "2016",
+      "isAvailable": "true"
+    },
+    {
+      "id": "4",
+      "author": "Nir Kaufman, Thierry Templier",
+      "title": "Angular 2 Components",
+      "genre": "Technology",
+      "year": "2016",
+      "isAvailable": "false"
+    },
+    {
+      "id": "5",
+      "author": "Gion Kunz",
+      "title": "Mastering Angular 2 Components",
+      "genre": "Technology",
+      "year": "2016",
+      "isAvailable": "true"
+    },
+    {
+      "id": "6",
+      "author": "Valerio De Sanctis",
+      "title": "ASP.NET Core and Angular 2",
+      "genre": "Technology",
+      "year": "2016",
+      "isAvailable": "false"
+    }
+]

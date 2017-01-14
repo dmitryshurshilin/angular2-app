@@ -1,0 +1,17 @@
+.details {
+    width: 100%;
+    margin: 0 -20px;
+}
+    .details__row {
+        display: flex;
+        padding: 10px 20px;
+        border-bottom: 1px solid #eee;
+    }
+        .details__label {
+            flex: 0 0 20%;
+            font-weight: 500;
+            color: #555;
+        }
+        .details__value {
+            flex: 0 0 80%;
+        }
