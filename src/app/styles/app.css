@@ -80,6 +80,14 @@ header, nav, main, div, span, footer {
             font-size: 36px;
             font-weight: 300;
         }
+        .app-main__content a {
+            font-weight: 500;
+            color: #3f51b5;
+            text-decoration: none;
+        }
+            .app-main__content a:hover {
+                color: #3498db;
+            }
 
 
 /**
@@ -103,3 +111,4 @@ header, nav, main, div, span, footer {
     color: #fff;
     text-align: center;
 }
+

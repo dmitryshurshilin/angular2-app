@@ -20,11 +20,3 @@
     .table td {
         font-weight: 400;
     }
-        .table td a {
-            font-weight: 500;
-            color: #3f51b5;
-            text-decoration: none;
-        }
-            .table td a:hover {
-                opacity: .85;
-            }
