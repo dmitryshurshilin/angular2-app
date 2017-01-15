@@ -1,16 +1,15 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({ name: 'booksFilter' })
+
 export class BooksFilter implements PipeTransform {
-    transform(books: any, author: string, aviablity: number):any {
-
-        if (!author && !aviablity) {
-            return books;
-        }
-
+    transform(books: Array<any>, title: string, author?: string, genre?: string, availability?: string):any {
         return books.filter((book) => {
-            return (book.author.indexOf(author) !== -1);
+            return ((!title || title && ~book.title.toUpperCase().indexOf(title.toUpperCase())) &&
+                    (!author || author && ~book.author.toUpperCase().indexOf(author.toUpperCase())) &&
+                    (!genre || genre === '0' || genre && book.genre === genre) &&
+                    (!availability || availability === '0' || availability && book.isAvailable === availability)
+                );
         });
-
     }
 }

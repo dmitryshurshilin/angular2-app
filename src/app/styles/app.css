@@ -169,10 +169,10 @@ header, nav, main, div, span, footer, input, textarea, button, label {
         align-items: flex-end;
     }
         .app-filter__cell {
-            flex: 0 0 22%;
+            flex: 0 1 25%;
         }
             .app-filter__cell:not(:last-child) {
-                margin-right: 10px;
+                padding-right: 10px;
             }
         .app-filter__label {
             display: inline-block;

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Http, Response } from '@angular/http';
 
 @Component({
@@ -7,10 +7,12 @@ import { Http, Response } from '@angular/http';
     styleUrls: [ './list.component.css' ],
     templateUrl: './list.component.html'
 })
-export class BooksListComponent {
+export class BooksListComponent implements OnInit {
 
-    filterAuthor: string;
-    filterAviablity: number;
+    filterTitle: string = '';
+    filterAuthor: string = '';
+    filterGenre: string = '0';
+    filterAvailability: string = '0';
 
     books: Object;
     loading: Boolean;
