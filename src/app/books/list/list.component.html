@@ -1,7 +1,43 @@
-<div *ngIf="loading">loading...</div>
-<pre>{{data | json}}</pre>
 
-<table class="table">
+<div class="app-filter">
+    <div class="app-filter__row">
+        <div class="app-filter__cell">
+            <label class="app-filter__label">Title:</label>
+            <div class="app-filter__field">
+                <input type="text" class="form-control" [(ngModel)]="filterTitle">
+            </div>
+        </div>
+        <div class="app-filter__cell">
+            <label class="app-filter__label">Author:</label>
+            <div class="app-filter__field">
+                <input type="text" class="form-control" [(ngModel)]="filterAuthor">
+            </div>
+        </div>
+        <div class="app-filter__cell">
+            <label class="app-filter__label">Genre:</label>
+            <div class="app-filter__field">
+                <select class="form-control" [(ngModel)]="filterGenre">
+                    <option value="0">Any</option>
+                    <option value="Technology">Technology</option>
+                    <option value="Detective">Detective</option>
+                </select>
+            </div>
+        </div>
+        <div class="app-filter__cell">
+            <label class="app-filter__label">Availability:</label>
+            <div class="app-filter__field">
+                <select class="form-control" [(ngModel)]="filterAvailability">
+                    <option value="0">Any</option>
+                    <option value="true">Available</option>
+                    <option value="false">Out of stock</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="loading-indicator" *ngIf="loading">loading...</div>
+<table class="table" *ngIf="!loading">
     <thead>
         <tr>
             <th>Name</th>
@@ -13,9 +49,10 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let book of books">
+        <tr *ngFor="let book of books | booksFilter:filterTitle:filterAuthor:filterGenre:filterAvailability">
             <td><a href="/#/book/view/{{book.id}}">{{book.title}}</a></td>
             <td>{{book.author}}</td>
+            <td>{{book.genre}}</td>
             <td>{{book.year}}</td>
             <td>
                 <div [ngSwitch]="book.isAvailable">

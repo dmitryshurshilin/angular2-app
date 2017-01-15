@@ -118,6 +118,7 @@ header, nav, main, div, span, footer, input, textarea, button, label {
 */
 .form-control {
     width: 100%;
+    height: 40px;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 2px;
@@ -130,6 +131,7 @@ header, nav, main, div, span, footer, input, textarea, button, label {
         border-color: #3498db;
     }
 .form-button {
+    height: 40px;
     padding: 10px 40px;
     background-color: #3f51b5;
     border: 0;
@@ -144,3 +146,38 @@ header, nav, main, div, span, footer, input, textarea, button, label {
         opacity: .9;
         cursor: pointer;
     }
+
+/**
+    Loading indicator
+*/
+.loading-indicator {
+    padding: 20px;
+    background-color: #efefef;
+    text-align: center;
+}
+
+/**
+    App filter
+*/
+.app-filter {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: #efefef;
+}
+    .app-filter__row {
+        display: flex;
+        align-items: flex-end;
+    }
+        .app-filter__cell {
+            flex: 0 1 25%;
+        }
+            .app-filter__cell:not(:last-child) {
+                padding-right: 10px;
+            }
+        .app-filter__label {
+            display: inline-block;
+            margin-bottom: 5px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #555;
+        }
