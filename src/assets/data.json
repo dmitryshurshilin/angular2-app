@@ -46,5 +46,21 @@
       "genre": "Technology",
       "year": "2016",
       "isAvailable": "false"
+    },
+    {
+      "id": "7",
+      "author": "Agatha Christie",
+      "title": "Murder on the Orient Express: A Hercule Poirot Mystery (Hercule Poirot Mysteries)",
+      "genre": "Detective",
+      "year": "1934",
+      "isAvailable": "true"
+    },
+    {
+      "id": "8",
+      "author": "Agatha Christie",
+      "title": "The Pale Horse",
+      "genre": "Detective",
+      "year": "1961",
+      "isAvailable": "true"
     }
 ]

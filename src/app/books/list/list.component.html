@@ -36,6 +36,7 @@
         <tr *ngFor="let book of books | booksFilter:filterAuthor:filterAviability">
             <td><a href="/#/book/view/{{book.id}}">{{book.title}}</a></td>
             <td>{{book.author}}</td>
+            <td>{{book.genre}}</td>
             <td>{{book.year}}</td>
             <td>
                 <div [ngSwitch]="book.isAvailable">
