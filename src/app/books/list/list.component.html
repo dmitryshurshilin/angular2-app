@@ -4,21 +4,18 @@
         <div class="app-filter__cell">
             <label class="app-filter__label">Author:</label>
             <div class="app-filter__field">
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" [(ngModel)]="filterAuthor">
             </div>
         </div>
         <div class="app-filter__cell">
             <label class="app-filter__label">Availability:</label>
             <div class="app-filter__field">
-                <select class="form-control">
+                <select class="form-control" [(ngModel)]="filterAviability">
                     <option value="0">Any</option>
                     <option value="1">Available</option>
                     <option value="2">Out of stock</option>
                 </select>
             </div>
-        </div>
-        <div class="app-filter__cell">
-            <button class="form-button">Apply filters</button>
         </div>
     </div>
 </div>
@@ -36,7 +33,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let book of books | booksFilter">
+        <tr *ngFor="let book of books | booksFilter:filterAuthor:filterAviability">
             <td><a href="/#/book/view/{{book.id}}">{{book.title}}</a></td>
             <td>{{book.author}}</td>
             <td>{{book.year}}</td>

@@ -9,6 +9,9 @@ import { Http, Response } from '@angular/http';
 })
 export class BooksListComponent {
 
+    filterAuthor: string;
+    filterAviablity: number;
+
     books: Object;
     loading: Boolean;
 
@@ -16,6 +19,7 @@ export class BooksListComponent {
 
     ngOnInit() {
         this.loading = true;
+
         this.http.request('http://localhost:3000/assets/data.json')
             .subscribe((res: Response) => {
                 this.books = res.json();
