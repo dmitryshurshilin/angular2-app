@@ -11,7 +11,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let book of books">
+        <tr *ngFor="let book of books | booksFilter">
             <td><a href="/#/book/view/{{book.id}}">{{book.title}}</a></td>
             <td>{{book.author}}</td>
             <td>{{book.year}}</td>
