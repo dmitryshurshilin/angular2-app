@@ -144,3 +144,12 @@ header, nav, main, div, span, footer, input, textarea, button, label {
         opacity: .9;
         cursor: pointer;
     }
+
+/**
+    Loading indicator
+*/
+.loading-indicator {
+    padding: 20px;
+    background: #efefef;
+    text-align: center;
+}

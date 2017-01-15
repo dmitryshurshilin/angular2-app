@@ -1,7 +1,5 @@
-<div *ngIf="loading">loading...</div>
-<pre>{{data | json}}</pre>
-
-<table class="table">
+<div class="loading-indicator" *ngIf="loading">loading...</div>
+<table class="table" *ngIf="!loading">
     <thead>
         <tr>
             <th>Name</th>
