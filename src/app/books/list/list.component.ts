@@ -23,12 +23,12 @@ export class BooksListComponent implements OnInit {
 
     ngOnInit() {
         this.loading = true;
-
         this.bookService.getBooks()
-            .subscribe((res: any) => {
-                this.books = res.json();
-                this.loading = false;
-            });
+            .subscribe((books) => {
+                    this.books = books;
+                    this.loading = false;
+                }
+            );
     }
 
 }
