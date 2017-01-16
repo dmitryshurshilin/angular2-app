@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { Http, Response } from '@angular/http';
+import { BookService } from '../service/book.service';
 
 @Component({
     selector: 'books-list',  // <books-list></books-list>
-    providers: [],
+    providers: [
+        BookService
+    ],
     styleUrls: [ './list.component.css' ],
     templateUrl: './list.component.html'
 })
@@ -17,16 +19,16 @@ export class BooksListComponent implements OnInit {
     books: Object;
     loading: Boolean;
 
-    constructor(public http: Http) {}
+    constructor(private bookService: BookService) {}
 
     ngOnInit() {
         this.loading = true;
-
-        this.http.request('http://localhost:3000/assets/data.json')
-            .subscribe((res: Response) => {
-                this.books = res.json();
-                this.loading = false;
-            });
+        this.bookService.getBooks()
+            .subscribe((books) => {
+                    this.books = books;
+                    this.loading = false;
+                }
+            );
     }
 
 }
