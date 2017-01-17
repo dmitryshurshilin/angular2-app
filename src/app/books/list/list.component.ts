@@ -16,8 +16,10 @@ export class BooksListComponent implements OnInit {
     filterGenre: string = '0';
     filterAvailability: string = '0';
 
-    books: Object;
+    books: Array<Object>;
     loading: Boolean;
+    sortKey: String = 'title';
+    ascSort: Boolean = true;
 
     constructor(private bookService: BookService) {}
 
@@ -29,6 +31,11 @@ export class BooksListComponent implements OnInit {
                     this.loading = false;
                 }
             );
+    }
+
+    sort(key) {
+        (key === this.sortKey) && (this.ascSort = !this.ascSort);
+        this.sortKey = key;
     }
 
 }

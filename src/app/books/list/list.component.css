@@ -14,9 +14,16 @@
         font-size: 14px;
     }
     .table th {
+        font-size: 12px;
         font-weight: 500;
         text-align: left;
+        color: #666;
     }
+        .table__sorter:hover {
+            color: #222;
+            text-decoration: underline;
+            cursor: pointer;
+        }
     .table td {
         font-weight: 400;
     }

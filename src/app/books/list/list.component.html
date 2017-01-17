@@ -40,16 +40,16 @@
 <table class="table" *ngIf="!loading">
     <thead>
         <tr>
-            <th>Name</th>
-            <th>Author</th>
-            <th>Genre</th>
-            <th>Year</th>
-            <th>Status</th>
+            <th><span class="table__sorter" (click)="sort('title')">Title</span></th>
+            <th><span class="table__sorter" (click)="sort('author')">Author</span></th>
+            <th><span class="table__sorter" (click)="sort('genre')">Genre</span></th>
+            <th><span class="table__sorter" (click)="sort('year')">Year</span></th>
+            <th><span class="table__sorter" (click)="sort('isAvailable')">Status</span></th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let book of books | booksFilter:filterTitle:filterAuthor:filterGenre:filterAvailability">
+        <tr *ngFor="let book of books | booksFilter:filterTitle:filterAuthor:filterGenre:filterAvailability | booksSort:sortKey:ascSort">
             <td><a href="/#/book/view/{{book.id}}">{{book.title}}</a></td>
             <td>{{book.author}}</td>
             <td>{{book.genre}}</td>
