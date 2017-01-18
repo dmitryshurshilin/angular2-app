@@ -1,28 +1,28 @@
-<h1>Angular 2 By Example</h1>
-
-<div class="details">
+<div class="loading-indicator" *ngIf="loading">loading...</div>
+<h1 *ngIf="!loading">{{book.title}}</h1>
+<div class="details" *ngIf="!loading">
     <div class="details__row">
         <div class="details__label">Name</div>
         <div class="details__value">
-            Angular 2 By Example
+            {{book.title}}
         </div>
     </div>
     <div class="details__row">
         <div class="details__label">Author(s)</div>
         <div class="details__value">
-            <a href="#">Chandermani Arora</a>, <a href="#">Kevin Hennessy</a>
+            {{book.author}}
         </div>
     </div>
     <div class="details__row">
         <div class="details__label">Genre</div>
         <div class="details__value">
-            <a href="#">Technology</a>
+            {{book.genre}}
          </div>
     </div>
     <div class="details__row">
         <div class="details__label">Year</div>
         <div class="details__value">
-            November 2016
+            {{book.year}}
         </div>
     </div>
     <div class="details__row">
