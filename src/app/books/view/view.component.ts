@@ -12,19 +12,25 @@ import { BookService } from '../service/book.service';
 })
 export class BookViewComponent {
 
-    book: Object;
-    loading: Boolean;
+    private sub: any;
+    private id: Number;
+    private book: Object;
+    private loading: Boolean;
 
     constructor(private route: ActivatedRoute, private bookService: BookService) {}
 
     ngOnInit() {
         this.loading = true;
-        this.route.params.subscribe(params => {
+        this.sub = this.route.params.subscribe(params => {
             this.bookService.getBook(+params['id']).subscribe((book) => {
                 this.book = book;
                 this.loading = false;
             });
         });
+    }
+
+    ngOnDestroy() {
+        this.sub.unsubscribe();
     }
 
 }
