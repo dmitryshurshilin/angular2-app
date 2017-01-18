@@ -14,6 +14,20 @@ export class BookService {
             .map(this.extractData);
     }
 
+    /* Draft method */
+    getBook(id: number): Observable<any[]>  {
+        return this.http.get(this.dataUrl)
+            .map((res: Response) => {
+                let book;
+                res.json().forEach(item => {
+                    if (+item.id === id) {
+                        book = item;
+                    }
+                })
+                return book;
+            });
+    }
+
     private extractData(res: Response) {
         return res.json() || [];
     }
