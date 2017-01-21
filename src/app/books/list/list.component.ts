@@ -18,8 +18,6 @@ export class BooksListComponent implements OnInit {
 
     books: Array<Object>;
     loading: Boolean;
-    sortKey: String = 'title';
-    ascSort: Boolean = true;
 
     constructor(private bookService: BookService) {}
 
@@ -31,11 +29,6 @@ export class BooksListComponent implements OnInit {
                     this.loading = false;
                 }
             );
-    }
-
-    sort(key) {
-        (key === this.sortKey) && (this.ascSort = !this.ascSort);
-        this.sortKey = key;
     }
 
 }

@@ -37,30 +37,4 @@
 </div>
 
 <div class="loading-indicator" *ngIf="loading">loading...</div>
-<table class="table" *ngIf="!loading">
-    <thead>
-        <tr>
-            <th><span class="table__sorter" (click)="sort('title')">Title</span></th>
-            <th><span class="table__sorter" (click)="sort('author')">Author</span></th>
-            <th><span class="table__sorter" (click)="sort('genre')">Genre</span></th>
-            <th><span class="table__sorter" (click)="sort('year')">Year</span></th>
-            <th><span class="table__sorter" (click)="sort('isAvailable')">Status</span></th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let book of books | booksFilter:filterTitle:filterAuthor:filterGenre:filterAvailability | booksSort:sortKey:ascSort">
-            <td><a [routerLink]="['book/view/', book.id]">{{book.title}}</a></td>
-            <td>{{book.author}}</td>
-            <td>{{book.genre}}</td>
-            <td>{{book.year}}</td>
-            <td>
-                <div [ngSwitch]="book.isAvailable">
-                    <div *ngSwitchCase="'true'">Available</div>
-                    <div *ngSwitchCase="'false'">Out of stock</div>
-                </div>
-            </td>
-            <td><a [routerLink]="['book/edit/', book.id]">Edit</a></td>
-        </tr>
-    </tbody>
-</table>
+<books-table [books]="books" *ngIf="!loading"></books-table>
