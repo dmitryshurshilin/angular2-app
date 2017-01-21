@@ -10,7 +10,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let book of books | booksFilter:filterTitle:filterAuthor:filterGenre:filterAvailability | booksSort:sortKey:ascSort">
+        <tr *ngFor="let book of books | booksFilter:filterParams | booksSort:sortKey:ascSort">
             <td><a [routerLink]="['book/view/', book.id]">{{book.title}}</a></td>
             <td>{{book.author}}</td>
             <td>{{book.genre}}</td>

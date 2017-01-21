@@ -1,0 +1,36 @@
+<div class="app-filter">
+    <div class="app-filter__row">
+        <div class="app-filter__cell">
+            <label class="app-filter__label">Title:</label>
+            <div class="app-filter__field">
+                <input type="text" class="form-control" [(ngModel)]="filter.title" (keyup)="changeFilter()">
+            </div>
+        </div>
+        <div class="app-filter__cell">
+            <label class="app-filter__label">Author:</label>
+            <div class="app-filter__field">
+                <input type="text" class="form-control" [(ngModel)]="filter.author" (keyup)="changeFilter()">
+            </div>
+        </div>
+        <div class="app-filter__cell">
+            <label class="app-filter__label">Genre:</label>
+            <div class="app-filter__field">
+                <select class="form-control" [(ngModel)]="filter.genre" (change)="changeFilter()">
+                    <option value="0">Any</option>
+                    <option value="Technology">Technology</option>
+                    <option value="Detective">Detective</option>
+                </select>
+            </div>
+        </div>
+        <div class="app-filter__cell">
+            <label class="app-filter__label">Availability:</label>
+            <div class="app-filter__field">
+                <select class="form-control" [(ngModel)]="filter.availability" (change)="changeFilter()">
+                    <option value="0">Any</option>
+                    <option value="true">Available</option>
+                    <option value="false">Out of stock</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>

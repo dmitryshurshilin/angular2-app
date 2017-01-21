@@ -11,10 +11,7 @@ import { BookService } from '../service/book.service';
 })
 export class BooksListComponent implements OnInit {
 
-    filterTitle: string = '';
-    filterAuthor: string = '';
-    filterGenre: string = '0';
-    filterAvailability: string = '0';
+    filterParams: Object;
 
     books: Array<Object>;
     loading: Boolean;
@@ -29,6 +26,10 @@ export class BooksListComponent implements OnInit {
                     this.loading = false;
                 }
             );
+    }
+
+    filterWasChanged(event) {
+        this.filterParams = event;
     }
 
 }
