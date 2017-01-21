@@ -11,12 +11,19 @@ import { BookService } from '../service/book.service';
 })
 export class BooksListComponent implements OnInit {
 
-    filterParams: Object;
+    filterParams: any;
 
     books: Array<Object>;
     loading: Boolean;
 
-    constructor(private bookService: BookService) {}
+    constructor(private bookService: BookService) {
+        this.filterParams = {};
+        this.filterParams.title = '';
+        this.filterParams.author = '';
+        this.filterParams.genre = '0';
+        this.filterParams.availability = '0';
+
+    }
 
     ngOnInit() {
         this.loading = true;

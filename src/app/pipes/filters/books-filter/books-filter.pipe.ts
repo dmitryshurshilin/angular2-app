@@ -1,16 +1,22 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
-@Pipe({ name: 'booksFilter' })
+@Pipe({
+    name: 'booksFilter',
+    pure: false
+})
 
 export class BooksFilter implements PipeTransform {
-    transform(books: Array<any>, filterParams: Object):any {
-        return books.filter((book) => {
-            return book;
-            // return ((!title || title && ~book.title.toUpperCase().indexOf(title.toUpperCase())) &&
-            //         (!author || author && ~book.author.toUpperCase().indexOf(author.toUpperCase())) &&
-            //         (!genre || genre === '0' || genre && book.genre === genre) &&
-            //         (!availability || availability === '0' || availability && book.isAvailable === availability)
-            //     );
-        });
+
+    transform(books: Array<any>, filterParams: any):any {
+        return books.filter(book =>  this.isMatched(filterParams, book));
     }
+
+    isMatched(filterParams, book) {
+        return ((!filterParams.title || (filterParams.title && ~book.title.toUpperCase().indexOf(filterParams.title.toUpperCase()))) &&
+                (!filterParams.author || filterParams.author && ~book.author.toUpperCase().indexOf(filterParams.author.toUpperCase())) &&
+                (!filterParams.genre || filterParams.genre === '0' || filterParams.genre && book.genre === filterParams.genre) &&
+                (!filterParams.availability || filterParams.availability === '0' || filterParams.availability && book.isAvailable === filterParams.availability)
+            );
+    }
+
 }

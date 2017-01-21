@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 export class BooksTableComponent {
 
-    @Input() filterParams: Object;
+    @Input() filterParams: any;
     @Input() books: Array<Object>;
 
     sortKey: String = 'title';

@@ -1,5 +1,5 @@
 <div class="loading-indicator" *ngIf="loading">loading...</div>
 <div *ngIf="!loading">
-    <books-filter (onFilterChanged)="filterWasChanged($event)"></books-filter>
+    <books-filter [filterParams]="filterParams" (onFilterChanged)="filterWasChanged($event)"></books-filter>
     <books-table [books]="books" [filterParams]="filterParams"></books-table>
 </div>
