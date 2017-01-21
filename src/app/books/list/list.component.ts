@@ -11,17 +11,19 @@ import { BookService } from '../service/book.service';
 })
 export class BooksListComponent implements OnInit {
 
-    filterTitle: string = '';
-    filterAuthor: string = '';
-    filterGenre: string = '0';
-    filterAvailability: string = '0';
+    filterParams: any;
 
     books: Array<Object>;
     loading: Boolean;
-    sortKey: String = 'title';
-    ascSort: Boolean = true;
 
-    constructor(private bookService: BookService) {}
+    constructor(private bookService: BookService) {
+        this.filterParams = {};
+        this.filterParams.title = '';
+        this.filterParams.author = '';
+        this.filterParams.genre = '0';
+        this.filterParams.availability = '0';
+
+    }
 
     ngOnInit() {
         this.loading = true;
@@ -33,9 +35,8 @@ export class BooksListComponent implements OnInit {
             );
     }
 
-    sort(key) {
-        (key === this.sortKey) && (this.ascSort = !this.ascSort);
-        this.sortKey = key;
+    filterWasChanged(event) {
+        this.filterParams = event;
     }
 
 }

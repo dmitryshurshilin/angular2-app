@@ -6,6 +6,8 @@ import { FormsModule } from '@angular/forms';
 import { PipesModule } from '../pipes/pipes.module';
 
 import { BooksListComponent } from './list';
+import { BooksFilterComponent } from './list/filter/filter.component';
+import { BooksTableComponent } from './list/table/table.component';
 import { BookViewComponent } from './view';
 import { BookEditComponent } from './edit';
 
@@ -18,6 +20,8 @@ import { BookEditComponent } from './edit';
     ],
     declarations: [
         BooksListComponent,
+        BooksFilterComponent,
+        BooksTableComponent,
         BookViewComponent,
         BookEditComponent
     ],

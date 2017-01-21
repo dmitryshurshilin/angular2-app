@@ -1,0 +1,25 @@
+/**
+    App filter
+*/
+.app-filter {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: #efefef;
+}
+    .app-filter__row {
+        display: flex;
+        align-items: flex-end;
+    }
+        .app-filter__cell {
+            flex: 0 1 25%;
+        }
+            .app-filter__cell:not(:last-child) {
+                padding-right: 10px;
+            }
+        .app-filter__label {
+            display: inline-block;
+            margin-bottom: 5px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #555;
+        }
