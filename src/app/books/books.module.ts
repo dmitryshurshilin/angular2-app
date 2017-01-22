@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
 import { PipesModule } from '../pipes/pipes.module';
+import { UiModule } from '../ui/ui.module';
 
 import { BooksListComponent } from './list';
 import { BooksFilterComponent } from './list/filter/filter.component';
@@ -16,7 +17,8 @@ import { BookEditComponent } from './edit';
         CommonModule,
         RouterModule,
         FormsModule,
-        PipesModule
+        PipesModule,
+        UiModule
     ],
     declarations: [
         BooksListComponent,
