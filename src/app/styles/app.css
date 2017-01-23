@@ -130,6 +130,9 @@ header, nav, main, div, span, footer, input, textarea, button, label {
     .form-control:focus {
         border-color: #3498db;
     }
+    .form-control.ng-touched.ng-invalid {
+        border-color: #ff0000;
+    }
 .form-button {
     height: 40px;
     padding: 10px 40px;
@@ -146,3 +149,7 @@ header, nav, main, div, span, footer, input, textarea, button, label {
         opacity: .9;
         cursor: pointer;
     }
+.form__error {
+    font-size: 14px;
+    color: red;
+}

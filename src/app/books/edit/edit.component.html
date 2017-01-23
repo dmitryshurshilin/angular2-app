@@ -6,6 +6,9 @@
         <div class="form__field">
             <input type="text" id="name" name="name" class="form-control" formControlName="name">
         </div>
+        <div class="form__error" *ngIf="editForm.controls.name.dirty && editForm.controls.name.invalid">
+            Field "Name" is required.
+        </div>
     </div>
     <div class="form__row">
         <label class="form__label" for="author">Author(s)</label>
@@ -38,6 +41,6 @@
         </div>
     </div>
     <div class="form__row form__row--actions">
-        <button type="submit" class="form-button">Save</button>
+        <button type="submit" class="form-button" [disabled]="editForm.invalid">Save</button>
     </div>
 </form>
