@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, Validators } from '@angular/forms';
+import { yearsValidator } from '../../validators/years/years.validator';
 import { BookService } from '../service/book.service';
 
 @Component({
@@ -22,7 +23,7 @@ export class BookEditComponent {
         name: ["", Validators.required],
         author: [""],
         genre: [""],
-        year: [""],
+        year: ["", [Validators.required, yearsValidator]],
         description: [""],
         buy: [""]
     });
