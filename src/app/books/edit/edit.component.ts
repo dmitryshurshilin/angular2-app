@@ -18,23 +18,31 @@ export class BookEditComponent {
     private id: Number;
     private book: Object;
     private loading: Boolean;
+    private editForm: any;
 
-    public editForm = this.fb.group({
-        name: ["", Validators.required],
-        author: [""],
-        genre: [""],
-        year: ["", [Validators.required, yearsValidator]],
-        description: [""],
-        buy: [""]
-    });
+    constructor(private route: ActivatedRoute, public fb: FormBuilder, private bookService: BookService) {
 
-    constructor(private route: ActivatedRoute, public fb: FormBuilder, private bookService: BookService) {}
+        this.editForm = this.fb.group({
+            name: ["", Validators.required],
+            author: [""],
+            genre: [""],
+            year: ["", [Validators.required, yearsValidator]],
+            description: [""],
+            buy: [""]
+        });
+
+    }
 
     ngOnInit() {
         this.loading = true;
         this.sub = this.route.params.subscribe(params => {
-            this.bookService.getBook(+params['id']).subscribe((book) => {
-                this.book = book;
+            this.bookService.getBook(+params['id']).subscribe((book: any) => {
+                this.editForm.controls['name'].setValue(book.title);
+                this.editForm.controls['author'].setValue(book.author);
+                this.editForm.controls['genre'].setValue(book.genre);
+                this.editForm.controls['year'].setValue(book.year);
+                this.editForm.controls['description'].setValue(book.description);
+                this.editForm.controls['buy'].setValue(book.buy);
                 this.loading = false;
             });
         });
