@@ -1,0 +1,25 @@
+/**
+    Main navigation
+ */
+.app-navigation {
+    width: 1140px;
+    margin: 0 auto;
+ }
+    .app-navigation__items {
+        margin: 0 -15px;
+        padding: 0;
+        list-style: none;
+    }
+        .app-navigation__item {
+            display: inline-block;
+        }
+            .app-navigation__link {
+                display: inline-block;
+                padding: 15px;
+                font-weight: 500;
+                color: #3f51b5;
+                text-decoration: none;
+            }
+                .app-navigation__link:hover {
+                    opacity: .85;
+                }
