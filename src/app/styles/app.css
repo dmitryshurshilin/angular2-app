@@ -13,33 +13,6 @@ header, nav, main, div, span, footer, input, textarea, button, label {
     box-sizing: border-box;
 }
 
-
-/**
-    Main navigation
- */
-.navigation {
-    width: 1140px;
-    margin: 0 auto;
- }
-    .navigation__items {
-        margin: 0 -15px;
-        padding: 0;
-        list-style: none;
-    }
-        .navigation__item {
-            display: inline-block;
-        }
-            .navigation__link {
-                display: inline-block;
-                padding: 15px;
-                font-weight: 500;
-                color: #3f51b5;
-                text-decoration: none;
-            }
-                .navigation__link:hover {
-                    opacity: .85;
-                }
-
 /**
     App header
 */

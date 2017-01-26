@@ -17,6 +17,7 @@ import { AppState, InternalStateType } from './app.service';
 import { NoContentComponent } from './no-content';
 
 import { BooksModule } from './books/books.module';
+import { NavComponent } from './ui/nav/nav.component';
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -37,6 +38,7 @@ type StoreType = {
   bootstrap: [ AppComponent ],
   declarations: [
     AppComponent,
+    NavComponent,
     NoContentComponent
   ],
   imports: [ // import Angular's modules

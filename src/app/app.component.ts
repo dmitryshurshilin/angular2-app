@@ -16,13 +16,7 @@ import { AppState } from './app.service';
       './styles/app.css'
   ],
   template: `
-    <nav class="navigation">
-        <ul class="navigation__items">
-            <li class="navigation__item"><a [routerLink]="['./']" class="navigation__link">Home</a></li>
-            <li class="navigation__item"><a [routerLink]="['./books']" class="navigation__link">Books</a></li>
-        </ul>
-    </nav>
-
+    <app-nav></app-nav>
     <header class="app-header">
         <div class="app-header__content">
             <div class="app-header__logo">
