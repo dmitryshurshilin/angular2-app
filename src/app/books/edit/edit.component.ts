@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
 import { yearsValidator } from '../../validators/years/years.validator';
 import { BookService } from '../service/book.service';
@@ -20,7 +20,7 @@ export class BookEditComponent {
     private loading: Boolean;
     private editForm: any;
 
-    constructor(private route: ActivatedRoute, public fb: FormBuilder, private bookService: BookService) {
+    constructor(private route: ActivatedRoute, private router: Router, public fb: FormBuilder, private bookService: BookService) {
 
         this.editForm = this.fb.group({
             name: ["", Validators.required],
@@ -54,7 +54,7 @@ export class BookEditComponent {
 
     save() {
         this.bookService.save(this.editForm.value).subscribe(res => {
-            console.log(res);
+            this.router.navigate(['/book/view/', '5']);
         });
     }
 
