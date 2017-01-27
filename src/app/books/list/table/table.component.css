@@ -27,3 +27,6 @@
     .table td {
         font-weight: 400;
     }
+    .table td .fa-book {
+        margin-right: 5px;
+    }

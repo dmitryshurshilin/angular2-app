@@ -61,7 +61,9 @@ header, nav, main, div, span, footer, input, textarea, button, label {
             .app-main__content a:hover {
                 color: #3498db;
             }
-        .app-main__content h1 > a {
+        .app-main__content h1 > .icon {
+            margin-left: 10px;
+            font-size: 24px;
             font-weight: 300;
         }
 
