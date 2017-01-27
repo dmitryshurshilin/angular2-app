@@ -15,7 +15,7 @@ import { BookService } from '../service/book.service';
 export class BookEditComponent {
 
     private sub: any;
-    private id: Number;
+    private id: number;
     private book: Object;
     private loading: Boolean;
     private editForm: any;
@@ -36,7 +36,8 @@ export class BookEditComponent {
     ngOnInit() {
         this.loading = true;
         this.sub = this.route.params.subscribe(params => {
-            this.bookService.getBook(+params['id']).subscribe((book: any) => {
+            this.id = +params['id'];
+            this.bookService.getBook(this.id).subscribe((book: any) => {
                 this.editForm.controls['name'].setValue(book.title);
                 this.editForm.controls['author'].setValue(book.author);
                 this.editForm.controls['genre'].setValue(book.genre);
@@ -54,7 +55,7 @@ export class BookEditComponent {
 
     save() {
         this.bookService.save(this.editForm.value).subscribe(res => {
-            this.router.navigate(['/book/view/', '5']);
+            this.router.navigate(['/book/view/', this.id]);
         });
     }
 
