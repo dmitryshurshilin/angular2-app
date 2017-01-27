@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
 import { yearsValidator } from '../../validators/years/years.validator';
 import { BookService } from '../service/book.service';
@@ -15,12 +15,12 @@ import { BookService } from '../service/book.service';
 export class BookEditComponent {
 
     private sub: any;
-    private id: Number;
+    private id: number;
     private book: Object;
     private loading: Boolean;
     private editForm: any;
 
-    constructor(private route: ActivatedRoute, public fb: FormBuilder, private bookService: BookService) {
+    constructor(private route: ActivatedRoute, private router: Router, public fb: FormBuilder, private bookService: BookService) {
 
         this.editForm = this.fb.group({
             name: ["", Validators.required],
@@ -36,7 +36,8 @@ export class BookEditComponent {
     ngOnInit() {
         this.loading = true;
         this.sub = this.route.params.subscribe(params => {
-            this.bookService.getBook(+params['id']).subscribe((book: any) => {
+            this.id = +params['id'];
+            this.bookService.getBook(this.id).subscribe((book: any) => {
                 this.editForm.controls['name'].setValue(book.title);
                 this.editForm.controls['author'].setValue(book.author);
                 this.editForm.controls['genre'].setValue(book.genre);
@@ -54,7 +55,7 @@ export class BookEditComponent {
 
     save() {
         this.bookService.save(this.editForm.value).subscribe(res => {
-            console.log(res);
+            this.router.navigate(['/book/view/', this.id]);
         });
     }
 

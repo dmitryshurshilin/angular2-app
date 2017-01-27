@@ -61,6 +61,11 @@ header, nav, main, div, span, footer, input, textarea, button, label {
             .app-main__content a:hover {
                 color: #3498db;
             }
+        .app-main__content h1 > .icon {
+            margin-left: 10px;
+            font-size: 24px;
+            font-weight: 300;
+        }
 
 
 /**
@@ -122,6 +127,10 @@ header, nav, main, div, span, footer, input, textarea, button, label {
         opacity: .9;
         cursor: pointer;
     }
+.form-button[disabled] {
+    background-color: #ccc;
+    cursor: default;
+}
 .form__error {
     font-size: 14px;
     color: red;

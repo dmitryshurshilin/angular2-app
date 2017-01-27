@@ -11,7 +11,7 @@
     </thead>
     <tbody>
         <tr *ngFor="let book of books | booksFilter:filterParams | booksSort:sortKey:ascSort">
-            <td><a [routerLink]="['book/view/', book.id]">{{book.title}}</a></td>
+            <td><a [routerLink]="['/book/view/', book.id]"><i class="fa fa-book" aria-hidden="true"></i> {{book.title}}</a></td>
             <td>{{book.author}}</td>
             <td>{{book.genre}}</td>
             <td>{{book.year}}</td>
@@ -21,7 +21,7 @@
                     <div *ngSwitchCase="'false'">Out of stock</div>
                 </div>
             </td>
-            <td><a [routerLink]="['book/edit/', book.id]">Edit</a></td>
+            <td><a [routerLink]="['/book/edit/', book.id]"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
         </tr>
     </tbody>
 </table>
