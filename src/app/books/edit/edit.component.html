@@ -44,6 +44,6 @@
         </div>
     </div>
     <div class="form__row form__row--actions">
-        <button type="submit" class="form-button" [disabled]="editForm.invalid">Save</button>
+        <button type="submit" class="form-button" [disabled]="!editForm.valid">Save</button>
     </div>
 </form>

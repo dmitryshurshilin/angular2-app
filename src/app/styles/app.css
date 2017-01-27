@@ -125,6 +125,10 @@ header, nav, main, div, span, footer, input, textarea, button, label {
         opacity: .9;
         cursor: pointer;
     }
+.form-button[disabled] {
+    background-color: #ccc;
+    cursor: default;
+}
 .form__error {
     font-size: 14px;
     color: red;
