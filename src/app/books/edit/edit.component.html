@@ -25,7 +25,8 @@
     <div class="form__row">
         <label class="form__label" for="year">Year</label>
         <div class="form__field">
-            <input type="text" id="year" name="year" class="form-control"  formControlName="year">
+            <input-range [min]="1900" [max]="2020" formControlName="year"></input-range>
+            <!--<input type="text" id="year" name="year" class="form-control"  formControlName="year">-->
         </div>
         <div class="form__error" *ngIf="editForm.controls.year.dirty && editForm.controls.year.invalid">
             Year is required and must be a number from 1900 to 2017.

@@ -1,14 +1,17 @@
 import { NgModule } from '@angular/core';
 
 import { LoadingComponent } from './loading';
+import { InputRangeComponent } from './input-range';
 
 @NgModule({
     imports: [],
     declarations: [
-        LoadingComponent
+        LoadingComponent,
+        InputRangeComponent
     ],
     exports: [
-        LoadingComponent
+        LoadingComponent,
+        InputRangeComponent
     ],
     providers: [],
     bootstrap: []

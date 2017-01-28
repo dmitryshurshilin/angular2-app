@@ -111,6 +111,9 @@ header, nav, main, div, span, footer, input, textarea, button, label {
     .form-control.ng-touched.ng-invalid {
         border-color: #ff0000;
     }
+    .form-control--small {
+        width: 100px;
+    }
 .form-button {
     height: 40px;
     padding: 10px 40px;
