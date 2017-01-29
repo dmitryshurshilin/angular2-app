@@ -108,8 +108,12 @@ header, nav, main, div, span, footer, input, textarea, button, label {
     .form-control:focus {
         border-color: #3498db;
     }
-    .form-control.ng-touched.ng-invalid {
+    .form-control.ng-dirty.ng-invalid,
+    .ng-dirty.ng-invalid > .form-control {
         border-color: #ff0000;
+    }
+    .form-control--small {
+        width: 100px;
     }
 .form-button {
     height: 40px;
