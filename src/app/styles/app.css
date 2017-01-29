@@ -67,19 +67,6 @@ header, nav, main, div, span, footer, input, textarea, button, label {
             font-weight: 300;
         }
 
-
-/**
-    App state
-*/
-.app-state {
-    width: 1140px;
-    margin: 20px auto;
-    padding: 20px;
-    box-sizing: border-box;
-    background: #efefef;
-    border: 1px solid #ddd;
-}
-
 /**
     App footer
 */
