@@ -1,5 +1,18 @@
-import { Component, Input, forwardRef } from '@angular/core';
-import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { Component, Input, forwardRef, OnChanges } from '@angular/core';
+import { FormControl, ControlValueAccessor, NG_VALUE_ACCESSOR, NG_VALIDATORS } from '@angular/forms';
+
+export function inputRangeComponentValidator(min, max) {
+    return (c: FormControl) => {
+        let err = {
+            rangeError: {
+                given: c.value,
+                min: min,
+                max: max
+            }
+        };
+        return (c.value > +max || c.value < +min) ? err : null;
+    }
+}
 
 @Component({
     selector: 'input-range',  // <input-range></input-range>
@@ -10,13 +23,21 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
             provide: NG_VALUE_ACCESSOR,
             useExisting: forwardRef(() => InputRangeComponent),
             multi: true
+        },
+        {
+            provide: NG_VALIDATORS,
+            useExisting: forwardRef(() => InputRangeComponent),
+            multi: true
         }
     ]
 })
-export class InputRangeComponent {
+export class InputRangeComponent implements ControlValueAccessor, OnChanges {
 
     @Input('inputValue') _inputValue: any;
-    propagateChange = (_: any) => {};
+    @Input('min') min: any;
+    @Input('max') max: any;
+    propagateChange:any = () => {};
+    validateFn:any = () => {};
 
     constructor() {}
 
@@ -32,6 +53,12 @@ export class InputRangeComponent {
 
     registerOnTouched() {}
 
+    ngOnChanges(inputs) {
+        if (inputs.max || inputs.min) {
+            this.validateFn = inputRangeComponentValidator(inputs.min, inputs.max)
+        }
+    }
+
     get inputValue() {
         return this._inputValue;
     }
@@ -43,6 +70,10 @@ export class InputRangeComponent {
 
     changeValue(e) {
         this.inputValue = e.target.value;
+    }
+
+    validate(c: FormControl) {
+        return this.validateFn(c);
     }
 
 }

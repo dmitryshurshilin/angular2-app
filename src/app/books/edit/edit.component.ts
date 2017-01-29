@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
-import { yearsValidator } from '../../validators/years/years.validator';
 import { BookService } from '../service/book.service';
+import { inputRangeComponentValidator } from '../../ui/input-range';
 
 @Component({
     selector: 'book-edit',  // <book-edit></book-edit>
@@ -26,7 +26,7 @@ export class BookEditComponent {
             name: ["", Validators.required],
             author: [""],
             genre: [""],
-            year: ["", [Validators.required, yearsValidator]],
+            year: ["", [Validators.required, inputRangeComponentValidator(1900, 2019)]],
             description: [""],
             buy: [""]
         });

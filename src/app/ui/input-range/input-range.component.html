@@ -1,1 +1,1 @@
-<input type="text" (change)="changeValue($event)" value="{{inputValue}}" class="form-control form-control--small">
+<input type="text" (keyup)="changeValue($event)" (change)="changeValue($event)" value="{{inputValue}}" class="form-control form-control--small">
