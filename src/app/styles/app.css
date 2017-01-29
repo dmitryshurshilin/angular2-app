@@ -78,6 +78,14 @@ header, nav, main, div, span, footer, input, textarea, button, label {
 }
 
 
+@media screen and (max-width: 1270px) {
+    .app-header__content,
+    .app-main__content {
+        width: auto;
+    }
+}
+
+
 /**
     Form controls
 */
