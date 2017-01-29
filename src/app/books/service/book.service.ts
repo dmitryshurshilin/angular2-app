@@ -35,6 +35,13 @@ export class BookService {
             });
     }
 
+    add(data): Observable<any[]> {
+        return this.http.post('https://jsonplaceholder.typicode.com/posts/', data)
+            .map((res: Response) => {
+                return res.json();
+            });
+    }
+
     private extractData(res: Response) {
         return res.json() || [];
     }

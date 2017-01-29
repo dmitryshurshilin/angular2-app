@@ -21,6 +21,10 @@ export class NavComponent {
                 title: 'Books'
             },
             {
+                path: './book/new',
+                title: 'Add Book'
+            },
+            {
                 path: './order',
                 title: 'Order'
             }
