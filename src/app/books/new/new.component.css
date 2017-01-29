@@ -1,0 +1,13 @@
+.form__row {
+    padding: 10px 0;
+}
+    .form__label {
+        display: inline-block;
+        margin-bottom: 5px;
+        font-size: 14px;
+        font-weight: 500;
+        color: #555;
+    }
+    .form__field .form-control {
+        width: 50%;
+    }

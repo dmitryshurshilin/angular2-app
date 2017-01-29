@@ -1,0 +1,49 @@
+<h1>Add Book</h1>
+
+<form class="form" [formGroup]="newForm" (ngSubmit)="add()">
+    <div class="form__row">
+        <label class="form__label" for="name">Name</label>
+        <div class="form__field">
+            <input type="text" id="name" name="name" class="form-control" formControlName="name">
+        </div>
+        <div class="form__error" *ngIf="newForm.controls.name.dirty && newForm.controls.name.invalid">
+            Field "Name" is required.
+        </div>
+    </div>
+    <div class="form__row">
+        <label class="form__label" for="author">Author(s)</label>
+        <div class="form__field">
+            <input type="text" id="author" name="author" class="form-control"  formControlName="author">
+        </div>
+    </div>
+    <div class="form__row">
+        <label class="form__label" for="genre">Genre</label>
+        <div class="form__field">
+            <input type="text" id="genre" name="genre" class="form-control"  formControlName="genre">
+        </div>
+    </div>
+    <div class="form__row">
+        <label class="form__label" for="year">Year</label>
+        <div class="form__field">
+            <input-range [inputValue]="year" formControlName="year"></input-range>
+        </div>
+        <div class="form__error" *ngIf="newForm.controls.year.dirty && newForm.controls.year.invalid">
+            Year is required and must be a number from 1900 to 2019.
+        </div>
+    </div>
+    <div class="form__row">
+        <label class="form__label" for="description">Brief description</label>
+        <div class="form__field">
+            <textarea id="description" name="description" class="form-control"  formControlName="description"></textarea>
+        </div>
+    </div>
+    <div class="form__row">
+        <label class="form__label" for="buy">Buy (link)</label>
+        <div class="form__field">
+            <input type="text" id="buy" name="buy" class="form-control"  formControlName="buy">
+        </div>
+    </div>
+    <div class="form__row form__row--actions">
+        <button type="submit" class="form-button" [disabled]="!newForm.valid">Save</button>
+    </div>
+</form>
