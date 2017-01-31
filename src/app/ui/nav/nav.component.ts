@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
 
+export interface INavLink {
+    path: string;
+    title: string;
+}
+
 @Component({
     selector: 'app-nav',  // <app-nav></app-nav>
     styleUrls: [ './nav.component.css' ],
@@ -7,28 +12,13 @@ import { Component } from '@angular/core';
 })
 export class NavComponent {
 
-    links: Array<Object>;
+    links: Array<INavLink> = [];
 
     constructor() {
 
-        this.links = [
-            {
-                path: './',
-                title: 'Home'
-            },
-            {
-                path: './books',
-                title: 'Books'
-            },
-            {
-                path: './book/new',
-                title: 'Add Book'
-            },
-            {
-                path: './order',
-                title: 'Order'
-            }
-        ];
+        this.links.push({ path: './', title: 'Home' });
+        this.links.push({ path: './books', title: 'Books' });
+        this.links.push({ path: './book/new', title: 'Add Book' });
 
     }
 }
