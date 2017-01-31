@@ -1,4 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { IFilterParams } from '../../../interfaces/filter-params.interface';
 
 @Component({
     selector: 'books-filter',  // <books-filter></books-filter>
@@ -7,7 +8,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 })
 export class BooksFilterComponent {
 
-    @Input() filterParams: any;
+    @Input() filterParams: IFilterParams;
     @Output() onFilterChanged: EventEmitter<any>;
 
     filter: any;

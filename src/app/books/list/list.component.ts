@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BookService } from '../service/book.service';
+import { IFilterParams } from '../../interfaces/filter-params.interface';
 
 @Component({
     selector: 'books-list',  // <books-list></books-list>
@@ -11,18 +12,20 @@ import { BookService } from '../service/book.service';
 })
 export class BooksListComponent implements OnInit {
 
-    filterParams: any;
+    filterParams: IFilterParams;
 
     books: Array<Object>;
     loading: Boolean;
 
     constructor(private bookService: BookService) {
-        this.filterParams = {};
-        this.filterParams.title = '';
-        this.filterParams.author = '';
-        this.filterParams.genre = '0';
-        this.filterParams.availability = '0';
 
+        this.filterParams = {
+            title: '',
+            author: '',
+            genre: '0',
+            availability: '0'
+        };
+    
     }
 
     ngOnInit() {
