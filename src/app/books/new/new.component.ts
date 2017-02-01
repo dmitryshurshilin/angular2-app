@@ -19,7 +19,7 @@ export class BookNewComponent {
 
     constructor(private router: Router, public fb: FormBuilder, private bookService: BookService) {
         this.newForm = this.fb.group({
-            name: ["", Validators.required],
+            title: ["", Validators.required],
             author: [""],
             genre: [""],
             year: ["", [Validators.required, inputRangeComponentValidator(1900, 2019)]],

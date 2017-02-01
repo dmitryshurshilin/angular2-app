@@ -2,12 +2,12 @@
 
 <form class="form" [formGroup]="editForm" (ngSubmit)="save()">
     <div class="form__row">
-        <label class="form__label" for="name">Name</label>
+        <label class="form__label" for="title">Title</label>
         <div class="form__field">
-            <input type="text" id="name" name="name" class="form-control" formControlName="name">
+            <input type="text" id="title" name="title" class="form-control" formControlName="title">
         </div>
-        <div class="form__error" *ngIf="editForm.controls.name.dirty && editForm.controls.name.invalid">
-            Field "Name" is required.
+        <div class="form__error" *ngIf="editForm.controls.title.dirty && editForm.controls.title.invalid">
+            Field "Title" is required.
         </div>
     </div>
     <div class="form__row">

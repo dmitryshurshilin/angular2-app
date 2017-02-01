@@ -5,31 +5,26 @@ import { Observable } from 'rxjs/Observable';
 @Injectable()
 export class BookService {
 
-    private dataUrl = 'http://localhost:3000/assets/data.json';
+    private dataUrl = 'http://localhost:3001/books';
 
     constructor(private http: Http) {}
 
     getBooks(): Observable<any[]>  {
         return this.http.get(this.dataUrl)
-            .map(this.extractData);
-    }
-
-    /* Draft method */
-    getBook(id: number): Observable<any[]>  {
-        return this.http.get(this.dataUrl)
             .map((res: Response) => {
-                let book;
-                res.json().forEach(item => {
-                    if (+item.id === id) {
-                        book = item;
-                    }
-                })
-                return book;
+                return res.json();
             });
     }
 
-    save(data): Observable<any[]> {
-        return this.http.post('https://jsonplaceholder.typicode.com/posts/', data)
+    getBook(id: number): Observable<any[]>  {
+        return this.http.get(this.dataUrl + '/' + id)
+            .map((res: Response) => {
+                return res.json();
+            });
+    }
+
+    save(id: number, data: any): Observable<any[]> {
+        return this.http.put(this.dataUrl + '/' + id, data)
             .map((res: Response) => {
                 return res.json();
             });
@@ -40,10 +35,6 @@ export class BookService {
             .map((res: Response) => {
                 return res.json();
             });
-    }
-
-    private extractData(res: Response) {
-        return res.json() || [];
     }
 
 }

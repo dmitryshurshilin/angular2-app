@@ -23,7 +23,7 @@ export class BookEditComponent {
     constructor(private route: ActivatedRoute, private router: Router, public fb: FormBuilder, private bookService: BookService) {
 
         this.editForm = this.fb.group({
-            name: ["", Validators.required],
+            title: ["", Validators.required],
             author: [""],
             genre: [""],
             year: ["", [Validators.required, inputRangeComponentValidator(1900, 2019)]],
@@ -38,7 +38,7 @@ export class BookEditComponent {
         this.sub = this.route.params.subscribe(params => {
             this.id = +params['id'];
             this.bookService.getBook(this.id).subscribe((book: any) => {
-                this.editForm.controls['name'].setValue(book.title);
+                this.editForm.controls['title'].setValue(book.title);
                 this.editForm.controls['author'].setValue(book.author);
                 this.editForm.controls['genre'].setValue(book.genre);
                 this.editForm.controls['year'].setValue(book.year);
@@ -54,7 +54,7 @@ export class BookEditComponent {
     }
 
     save() {
-        this.bookService.save(this.editForm.value).subscribe(res => {
+        this.bookService.save(this.id, this.editForm.value).subscribe(res => {
             this.router.navigate(['/book/view/', this.id]);
         });
     }
