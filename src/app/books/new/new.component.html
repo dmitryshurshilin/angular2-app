@@ -2,12 +2,12 @@
 
 <form class="form" [formGroup]="newForm" (ngSubmit)="add()">
     <div class="form__row">
-        <label class="form__label" for="name">Name</label>
+        <label class="form__label" for="title">Title</label>
         <div class="form__field">
-            <input type="text" id="name" name="name" class="form-control" formControlName="name">
+            <input type="text" id="title" name="title" class="form-control" formControlName="title">
         </div>
-        <div class="form__error" *ngIf="newForm.controls.name.dirty && newForm.controls.name.invalid">
-            Field "Name" is required.
+        <div class="form__error" *ngIf="newForm.controls.title.dirty && newForm.controls.title.invalid">
+            Field "Title" is required.
         </div>
     </div>
     <div class="form__row">

@@ -1,15 +1,16 @@
-[
+{
+  "books": [
     {
-      "id": "1",
-      "author": "Pablo Deeleman",
-      "title": "Learning Angular 2",
+      "title": "Learning Angular 2.4",
+      "author": "Pablo Deeleman & Tammy Carter",
       "genre": "Technology",
-      "year": "2016",
+      "year": "2014",
       "description": "<p>This is a learn-as-you-build practical guide to building full-fledged applications using Angular 2 and other associated tools. It starts by unveiling the new features of the Angular 2 framework and quickly walks you through the basic building blocks that form the basis of making an application. If you have been building applications with 1.x versions of Angular, this book will also lay down the migration steps required to port your application to the newer version without disrupting the functionalities.</p>",
-      "isAvailable": "true"
+      "buy": "http://www.google.com/s",
+      "id": 1
     },
     {
-      "id": "2",
+      "id": 2,
       "author": "Chandermani Arora, Kevin Hennessy",
       "title": "Angular 2 By Example",
       "genre": "Technology",
@@ -18,7 +19,7 @@
       "isAvailable": "true"
     },
     {
-      "id": "3",
+      "id": 3,
       "author": "Vinci Rufus",
       "title": "Angular 2 Blueprints",
       "genre": "Technology",
@@ -27,7 +28,7 @@
       "isAvailable": "true"
     },
     {
-      "id": "4",
+      "id": 4,
       "author": "Nir Kaufman, Thierry Templier",
       "title": "Angular 2 Components",
       "genre": "Technology",
@@ -36,7 +37,7 @@
       "isAvailable": "false"
     },
     {
-      "id": "5",
+      "id": 5,
       "author": "Gion Kunz",
       "title": "Mastering Angular 2 Components",
       "genre": "Technology",
@@ -45,7 +46,7 @@
       "isAvailable": "true"
     },
     {
-      "id": "6",
+      "id": 6,
       "author": "Valerio De Sanctis",
       "title": "ASP.NET Core and Angular 2",
       "genre": "Technology",
@@ -54,7 +55,7 @@
       "isAvailable": "false"
     },
     {
-      "id": "7",
+      "id": 7,
       "author": "Agatha Christie",
       "title": "Murder on the Orient Express: A Hercule Poirot Mystery (Hercule Poirot Mysteries)",
       "genre": "Detective",
@@ -63,12 +64,21 @@
       "isAvailable": "true"
     },
     {
-      "id": "8",
+      "id": 8,
       "author": "Agatha Christie",
       "title": "The Pale Horse",
       "genre": "Detective",
       "year": "1961",
       "description": "<p>The Pale Horse is a work of detective fiction by Agatha Christie and first published in the UK by the Collins Crime Club on 6 November 1961 and in the US by Dodd, Mead and Company the following year.</p>",
       "isAvailable": "true"
+    },
+    {
+      "title": "Learning Angular 2.x",
+      "author": "Pablo Deeleman",
+      "genre": "Technology",
+      "year": "2016",
+      "description": "<p>This is a learn-as-you-build practical guide to building full-fledged applications using Angular 2 and other associated tools. It starts by unveiling the new features of the Angular 2 framework and quickly walks you through the basic building blocks that form the basis of making an application. If you have been building applications with 1.x versions of Angular, this book will also lay down the migration steps required to port your application to the newer version without disrupting the functionalities.</p>",
+      "id": 9
     }
-]
+  ]
+}
