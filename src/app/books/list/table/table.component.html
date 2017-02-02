@@ -16,10 +16,7 @@
             <td>{{book.genre}}</td>
             <td>{{book.year}}</td>
             <td>
-                <div [ngSwitch]="book.status">
-                    <div *ngSwitchCase="'1'"><a href="#">Get</a></div>
-                    <div *ngSwitchCase="'0'"><a href="#">Return</a></div>
-                </div>
+                <book-status [status]="book.status" [info]="false" [actions]="true"></book-status>
             </td>
             <td><a [routerLink]="['/book/edit/', book.id]"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
         </tr>

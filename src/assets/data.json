@@ -8,7 +8,7 @@
       "description": "<p>This is a learn-as-you-build practical guide to building full-fledged applications using Angular 2 and other associated tools. It starts by unveiling the new features of the Angular 2 framework and quickly walks you through the basic building blocks that form the basis of making an application. If you have been building applications with 1.x versions of Angular, this book will also lay down the migration steps required to port your application to the newer version without disrupting the functionalities.</p>",
       "buy": "http://www.google.com/s",
       "id": 1,
-      "status": "0"
+      "status": 0
     },
     {
       "id": 2,
@@ -17,7 +17,7 @@
       "genre": "Technology",
       "year": "2016",
       "description": "<p>Angular 2 will help you build faster, more efficient, and more flexible cross-platform applications. Angular 2 is known for taking the pain out of JavaScript development, and enabling more organized, readable, and testable code.</p><p>This book builds three apps with varying degrees of complexity. It starts with a simple ‘Guess the Number’ game, which serves as a platform to launch you into the world of Angular. Next, you will learn to construct a popular ‘7-Minute Workout’ app, covering the building blocks of Angular. The final app, ‘Personal Trainer’ morphs the existing ‘7-Minute Workout’ into a full-fledged personal workout builder and runner, covering advanced directive building, which is the most fundamental and powerful feature of Angular.</p>",
-      "status": "1"
+      "status": 1
     },
     {
       "id": 3,
@@ -26,7 +26,7 @@
       "genre": "Technology",
       "year": "2016",
       "description": "<p>Angular 2 will help you build faster, more efficient, and more flexible cross-platform applications. Angular 2 is known for taking the pain out of JavaScript development, and enabling more organized, readable, and testable code.</p><p>This book builds three apps with varying degrees of complexity. It starts with a simple ‘Guess the Number’ game, which serves as a platform to launch you into the world of Angular. Next, you will learn to construct a popular ‘7-Minute Workout’ app, covering the building blocks of Angular. The final app, ‘Personal Trainer’ morphs the existing ‘7-Minute Workout’ into a full-fledged personal workout builder and runner, covering advanced directive building, which is the most fundamental and powerful feature of Angular.</p>",
-      "status": "1"
+      "status": 1
     },
     {
       "id": 4,
@@ -35,7 +35,7 @@
       "genre": "Technology",
       "year": "2016",
       "description": "<p>This book is a concise guide to Angular 2 Components and is based on the stable version of Angular 2. You will start with learning about the Angular 2 Components architecture and how components differ from Angular directives in Angular 1. You will then move on to quickly set up an Angular 2 development environment and grasp the basics of TypeScript. With this strong foundation in place, you will start building components.</p>",
-      "status": "1"
+      "status": 1
     },
     {
       "id": 5,
@@ -44,7 +44,7 @@
       "genre": "Technology",
       "year": "2016",
       "description": "<p>Angular 2 will help you build faster, more efficient, and more flexible cross-platform applications. Angular 2 is known for taking the pain out of JavaScript development, and enabling more organized, readable, and testable code.</p><p>This book builds three apps with varying degrees of complexity. It starts with a simple ‘Guess the Number’ game, which serves as a platform to launch you into the world of Angular. Next, you will learn to construct a popular ‘7-Minute Workout’ app, covering the building blocks of Angular. The final app, ‘Personal Trainer’ morphs the existing ‘7-Minute Workout’ into a full-fledged personal workout builder and runner, covering advanced directive building, which is the most fundamental and powerful feature of Angular.</p>",
-      "status": "1"
+      "status": 1
     },
     {
       "id": 6,
@@ -53,7 +53,7 @@
       "genre": "Technology",
       "year": "2016",
       "description": "<p>Angular 2 will help you build faster, more efficient, and more flexible cross-platform applications. Angular 2 is known for taking the pain out of JavaScript development, and enabling more organized, readable, and testable code.</p><p>This book builds three apps with varying degrees of complexity. It starts with a simple ‘Guess the Number’ game, which serves as a platform to launch you into the world of Angular. Next, you will learn to construct a popular ‘7-Minute Workout’ app, covering the building blocks of Angular. The final app, ‘Personal Trainer’ morphs the existing ‘7-Minute Workout’ into a full-fledged personal workout builder and runner, covering advanced directive building, which is the most fundamental and powerful feature of Angular.</p>",
-      "status": "1"
+      "status": 1
     },
     {
       "id": 7,
@@ -62,7 +62,7 @@
       "genre": "Detective",
       "year": "1934",
       "description": "<p>Murder on the Orient Express is a detective novel by Agatha Christie featuring the Belgian detective Hercule Poirot. It was first published in the United Kingdom by the Collins Crime Club on 1 January 1934.[1] In the United States, it was published on 28 February 1934,[2]:213[3] under the title of Murder in the Calais Coach, by Dodd, Mead and Company.[4][5] The U.K. edition retailed at seven shillings and sixpence (7/6)[6] and the U.S. edition at $2.00.[5]</p>",
-      "status": "1"
+      "status": 1
     },
     {
       "id": 8,
@@ -71,7 +71,7 @@
       "genre": "Detective",
       "year": "1961",
       "description": "<p>The Pale Horse is a work of detective fiction by Agatha Christie and first published in the UK by the Collins Crime Club on 6 November 1961 and in the US by Dodd, Mead and Company the following year.</p>",
-      "status": "1"
+      "status": 1
     },
     {
       "title": "Learning Angular 2.x",
@@ -80,7 +80,7 @@
       "year": "2016",
       "description": "<p>This is a learn-as-you-build practical guide to building full-fledged applications using Angular 2 and other associated tools. It starts by unveiling the new features of the Angular 2 framework and quickly walks you through the basic building blocks that form the basis of making an application. If you have been building applications with 1.x versions of Angular, this book will also lay down the migration steps required to port your application to the newer version without disrupting the functionalities.</p>",
       "id": 9,
-      "status": "0"
+      "status": 0
     }
   ]
 }
