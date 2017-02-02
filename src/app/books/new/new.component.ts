@@ -24,6 +24,7 @@ export class BookNewComponent {
             genre: [""],
             year: ["", [Validators.required, inputRangeComponentValidator(1900, 2019)]],
             description: [""],
+            status: [""],
             buy: [""]
         });
     }

@@ -5,7 +5,7 @@
             <th><span class="table__sorter" (click)="sort('author')">Author</span></th>
             <th><span class="table__sorter" (click)="sort('genre')">Genre</span></th>
             <th><span class="table__sorter" (click)="sort('year')">Year</span></th>
-            <th><span class="table__sorter" (click)="sort('isAvailable')">Status</span></th>
+            <th><span class="table__sorter" (click)="sort('status')">Status</span></th>
             <th></th>
         </tr>
     </thead>
@@ -16,10 +16,7 @@
             <td>{{book.genre}}</td>
             <td>{{book.year}}</td>
             <td>
-                <div [ngSwitch]="book.isAvailable">
-                    <div *ngSwitchCase="'true'">Available</div>
-                    <div *ngSwitchCase="'false'">Out of stock</div>
-                </div>
+                <book-status [status]="book.status" [info]="false" [actions]="true"></book-status>
             </td>
             <td><a [routerLink]="['/book/edit/', book.id]"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
         </tr>

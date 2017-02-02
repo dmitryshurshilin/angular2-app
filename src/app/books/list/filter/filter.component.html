@@ -23,12 +23,11 @@
             </div>
         </div>
         <div class="app-filter__cell">
-            <label class="app-filter__label">Availability:</label>
+            <label class="app-filter__label">Status:</label>
             <div class="app-filter__field">
-                <select class="form-control" [(ngModel)]="filterParams.availability" (change)="changeFilter()">
-                    <option value="0">Any</option>
-                    <option value="true">Available</option>
-                    <option value="false">Out of stock</option>
+                <select class="form-control" [(ngModel)]="filterParams.status" (change)="changeFilter()">
+                    <option value="-1">Any</option>
+                    <option value="1">Available only</option>
                 </select>
             </div>
         </div>
