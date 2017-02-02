@@ -43,6 +43,15 @@
             <input type="text" id="buy" name="buy" class="form-control"  formControlName="buy">
         </div>
     </div>
+    <div class="form__row">
+        <label class="form__label" for="description">Status</label>
+        <div class="form__field">
+            <select id="status" name="status" class="form-control"  formControlName="status">
+                <option value="1">Available</option>
+                <option value="0">Unavailable</option>
+            </select>
+        </div>
+    </div>
     <div class="form__row form__row--actions">
         <button type="submit" class="form-button" [disabled]="!editForm.valid">Save</button>
     </div>

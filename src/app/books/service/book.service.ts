@@ -31,7 +31,7 @@ export class BookService {
     }
 
     add(data): Observable<any[]> {
-        return this.http.post('https://jsonplaceholder.typicode.com/posts/', data)
+        return this.http.post(this.dataUrl, data)
             .map((res: Response) => {
                 return res.json();
             });

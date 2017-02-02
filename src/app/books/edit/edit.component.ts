@@ -28,7 +28,8 @@ export class BookEditComponent {
             genre: [""],
             year: ["", [Validators.required, inputRangeComponentValidator(1900, 2019)]],
             description: [""],
-            buy: [""]
+            buy: [""],
+            status: [""]
         });
 
     }
@@ -44,6 +45,7 @@ export class BookEditComponent {
                 this.editForm.controls['year'].setValue(book.year);
                 this.editForm.controls['description'].setValue(book.description);
                 this.editForm.controls['buy'].setValue(book.buy);
+                this.editForm.controls['status'].setValue(book.status);
                 this.loading = false;
             });
         });
