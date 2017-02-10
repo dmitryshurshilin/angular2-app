@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { LoadingComponent } from './loading';
 import { InputRangeComponent } from './input-range';
 import { StatusComponent } from './status';
+import { ModalComponent, ModalDirective } from './modal';
 
 @NgModule({
     imports: [
@@ -12,12 +13,16 @@ import { StatusComponent } from './status';
     declarations: [
         LoadingComponent,
         InputRangeComponent,
-        StatusComponent
+        StatusComponent,
+        ModalComponent,
+        ModalDirective
     ],
     exports: [
         LoadingComponent,
         InputRangeComponent,
-        StatusComponent
+        StatusComponent,
+        ModalComponent,
+        ModalDirective
     ],
     providers: [],
     bootstrap: []
