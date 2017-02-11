@@ -17,16 +17,19 @@ import { Component, Input, OnInit } from '@angular/core';
             <div [ngSwitch]="status">
                 <div *ngSwitchCase="0">
                     <span *ngIf="info">Unavailable</span>
-                    <span class="book-status__link" *ngIf="actions">Return</span>
+                    <a [routerLink]="['/book/return/', id]" class="book-status__link" *ngIf="actions">Return</a>
                 </div>
                 <div *ngSwitchCase="1">
                     <span *ngIf="info">Available</span>
-                    <span class="book-status__link" *ngIf="actions">Get</span>
+                    <a [routerLink]="['/book/get/', id]" class="book-status__link" *ngIf="actions">Get</a>
                 </div>
             </div>
         </div>`
 })
 export class StatusComponent implements OnInit {
+
+    @Input()
+    id: number;
 
     @Input()
     status: number;

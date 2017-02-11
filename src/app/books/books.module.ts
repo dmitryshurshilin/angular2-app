@@ -13,6 +13,8 @@ import { BooksTableComponent } from './list/table/table.component';
 import { BookViewComponent } from './view';
 import { BookEditComponent } from './edit';
 import { BookNewComponent } from './new';
+import { BookGetComponent } from './get';
+import { BookReturnComponent } from './return';
 
 @NgModule({
     imports: [
@@ -29,7 +31,9 @@ import { BookNewComponent } from './new';
         BooksTableComponent,
         BookViewComponent,
         BookEditComponent,
-        BookNewComponent
+        BookNewComponent,
+        BookGetComponent,
+        BookReturnComponent
     ],
     providers: [],
     bootstrap: []
