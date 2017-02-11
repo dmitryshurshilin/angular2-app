@@ -16,7 +16,7 @@
             <td>{{book.genre}}</td>
             <td>{{book.year}}</td>
             <td>
-                <book-status [id]="book.id" [status]="book.status" [info]="false" [actions]="true"></book-status>
+                <book-status [id]="book.id" [availability]="book.holder === 0" [info]="false" [actions]="true"></book-status>
             </td>
             <td><a [routerLink]="['/book/edit/', book.id]"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
         </tr>

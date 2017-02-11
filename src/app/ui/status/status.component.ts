@@ -14,15 +14,13 @@ import { Component, Input, OnInit } from '@angular/core';
     `],
     template: `
         <div class="book-status">
-            <div [ngSwitch]="status">
-                <div *ngSwitchCase="0">
-                    <span *ngIf="info">Unavailable</span>
-                    <a [routerLink]="['/book/return/', id]" class="book-status__link" *ngIf="actions">Return</a>
-                </div>
-                <div *ngSwitchCase="1">
-                    <span *ngIf="info">Available</span>
-                    <a [routerLink]="['/book/get/', id]" class="book-status__link" *ngIf="actions">Get</a>
-                </div>
+            <div *ngIf="availability">
+                <span *ngIf="info">Available</span>
+                <a [routerLink]="['/book/get/', id]" class="book-status__link" *ngIf="actions">Get</a>
+            </div>
+            <div *ngIf="!availability">
+                <span *ngIf="info">Unavailable</span>
+                <a [routerLink]="['/book/return/', id]" class="book-status__link" *ngIf="actions">Return</a>
             </div>
         </div>`
 })
@@ -32,7 +30,7 @@ export class StatusComponent implements OnInit {
     id: number;
 
     @Input()
-    status: number;
+    availability: boolean;
 
     @Input()
     actions: boolean;
