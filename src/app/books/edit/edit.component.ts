@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
-import { BookService } from '../service/book.service';
+import { BookService } from '../service';
 import { inputRangeComponentValidator } from '../../ui/input-range';
 
 @Component({

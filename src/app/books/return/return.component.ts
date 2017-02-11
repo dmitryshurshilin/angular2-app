@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
-import { BookService } from '../service/book.service';
+
+import { UsersService } from '../../users/service';
+import { BookService } from '../service';
 
 @Component({
     selector: 'book-return', // <book-return></book-return>
@@ -12,4 +14,10 @@ import { BookService } from '../service/book.service';
     templateUrl: './return.component.html'
 })
 
-export class BookReturnComponent {}
+export class BookReturnComponent {
+
+    constructor(private booksService: BookService, private usersService: UsersService) {
+
+    }
+
+}

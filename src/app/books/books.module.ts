@@ -6,6 +6,9 @@ import { FormsModule } from '@angular/forms';
 
 import { PipesModule } from '../pipes/pipes.module';
 import { UiModule } from '../ui/ui.module';
+import { UsersModule } from '../users/users.module';
+
+import { BookService } from './service';
 
 import { BooksListComponent } from './list';
 import { BooksFilterComponent } from './list/filter/filter.component';
@@ -23,7 +26,8 @@ import { BookReturnComponent } from './return';
         RouterModule,
         FormsModule,
         PipesModule,
-        UiModule
+        UiModule,
+        UsersModule
     ],
     declarations: [
         BooksListComponent,
@@ -35,7 +39,9 @@ import { BookReturnComponent } from './return';
         BookGetComponent,
         BookReturnComponent
     ],
-    providers: [],
+    providers: [
+        BookService
+    ],
     bootstrap: []
 })
 
