@@ -7,11 +7,9 @@ import { Component, Input, OnInit } from '@angular/core';
             font-weight: 500;
             color: var(--color-primary-blue);
             cursor: pointer;
-            border-bottom: 1px dashed var(--color-primary-blue);
         }
         .book-status__link:hover {
             color: var(--color-primary-blue-light);
-            border-bottom: 1px dashed var(--color-primary-blue-light);
         }
     `],
     template: `
@@ -19,11 +17,11 @@ import { Component, Input, OnInit } from '@angular/core';
             <div [ngSwitch]="status">
                 <div *ngSwitchCase="0">
                     <span *ngIf="info">Unavailable</span>
-                    <span class="book-status__link" modal *ngIf="actions">Return</span>
+                    <span class="book-status__link" *ngIf="actions">Return</span>
                 </div>
                 <div *ngSwitchCase="1">
                     <span *ngIf="info">Available</span>
-                    <span class="book-status__link" modal *ngIf="actions">Get</span>
+                    <span class="book-status__link" *ngIf="actions">Get</span>
                 </div>
             </div>
         </div>`
