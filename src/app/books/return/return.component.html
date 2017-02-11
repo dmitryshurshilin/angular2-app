@@ -1,1 +1,25 @@
 <h1>Return book</h1>
+
+<div *ngIf="!loading && book.holder === 0">
+    This book is in library. You can get it.
+</div>
+
+<div *ngIf="!loading && book.holder !== 0 && user">
+    <div class="details" *ngIf="!loading">
+        <div class="details__row">
+            <div class="details__label">Book</div>
+            <div class="details__value">
+                {{book.title}}
+            </div>
+        </div>
+        <div class="details__row">
+            <div class="details__label">Book holder</div>
+            <div class="details__value">
+                {{user.name}}
+            </div>
+        </div>
+        <div class="details__row">
+            <button class="form-button" (click)="markAsReturned(book)">Return</button>
+        </div>
+    </div>
+</div>    
