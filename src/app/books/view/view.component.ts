@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { BookService } from '../service/book.service';
+import { BookService } from '../service';
 
 @Component({
     selector: 'book-view',  // <books-view></books-view>

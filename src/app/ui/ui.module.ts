@@ -1,28 +1,25 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 import { LoadingComponent } from './loading';
 import { InputRangeComponent } from './input-range';
 import { StatusComponent } from './status';
-import { ModalComponent, ModalDirective } from './modal';
 
 @NgModule({
     imports: [
-        CommonModule
+        CommonModule,
+        RouterModule
     ],
     declarations: [
         LoadingComponent,
         InputRangeComponent,
-        StatusComponent,
-        ModalComponent,
-        ModalDirective
+        StatusComponent
     ],
     exports: [
         LoadingComponent,
         InputRangeComponent,
-        StatusComponent,
-        ModalComponent,
-        ModalDirective
+        StatusComponent
     ],
     providers: [],
     bootstrap: []

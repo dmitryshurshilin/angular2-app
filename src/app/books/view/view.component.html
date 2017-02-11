@@ -38,7 +38,7 @@
     <div class="details__row">
         <div class="details__label">Status</div>
         <div class="details__value">
-            <book-status [status]="book.status" [info]="true" [actions]="true"></book-status>
+            <book-status [id]="book.id" [availability]="book.holder === 0" [info]="true" [actions]="true"></book-status>
         </div>
     </div>
 </div>
