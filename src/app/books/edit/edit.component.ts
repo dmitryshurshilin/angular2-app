@@ -9,7 +9,7 @@ import { inputRangeComponentValidator } from '../../ui/input-range';
     providers: [
         BookService
     ],
-    styleUrls: [ './edit.component.css' ],
+    styleUrls: [ '../../styles/forms.css' ],
     templateUrl: './edit.component.html'
 })
 export class BookEditComponent {
