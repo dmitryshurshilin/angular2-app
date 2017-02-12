@@ -10,7 +10,7 @@ import { BookService } from '../service';
     providers: [
         BookService
     ],
-    styleUrls: [ './get.component.css' ],
+    styleUrls: [ '../../styles/forms.css' ],
     templateUrl: './get.component.html'
 })
 

@@ -9,7 +9,7 @@ import { inputRangeComponentValidator } from '../../ui/input-range';
     providers: [
         BookService
     ],
-    styleUrls: [ './new.component.css' ],
+    styleUrls: [ '../../styles/forms.css' ],
     templateUrl: './new.component.html'
 })
 
