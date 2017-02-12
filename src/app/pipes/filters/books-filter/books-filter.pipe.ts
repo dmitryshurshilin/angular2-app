@@ -15,7 +15,7 @@ export class BooksFilter implements PipeTransform {
         return ((!filterParams.title || (filterParams.title && ~book.title.toUpperCase().indexOf(filterParams.title.toUpperCase()))) &&
                 (!filterParams.author || filterParams.author && ~book.author.toUpperCase().indexOf(filterParams.author.toUpperCase())) &&
                 (!filterParams.genre || filterParams.genre === '0' || filterParams.genre && book.genre === filterParams.genre) &&
-                ((!filterParams.status || filterParams.status === '-1') || (filterParams.status && filterParams.status !== '-1' && book.status === filterParams.status))
+                ((!filterParams.status || filterParams.status === '-1') || (filterParams.status && filterParams.status !== '-1' && book.holder === 0))
             );
     }
 
