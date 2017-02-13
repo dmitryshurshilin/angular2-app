@@ -7,7 +7,7 @@ import { IFilterParams } from '../../interfaces/filter-params.interface';
     providers: [
         BookService
     ],
-    styleUrls: [ './list.component.css' ],
+    styleUrls: [],
     templateUrl: './list.component.html'
 })
 export class BooksListComponent implements OnInit {
