@@ -5,6 +5,7 @@ import { BookEditComponent } from './books/edit';
 import { BookNewComponent } from './books/new';
 import { BookGetComponent } from './books/get';
 import { BookReturnComponent } from './books/return';
+import { UsersListComponent } from './users/list';
 
 import { NoContentComponent } from './no-content';
 
@@ -18,6 +19,7 @@ export const ROUTES: Routes = [
   { path: 'book/edit/:id', component: BookEditComponent },
   { path: 'book/get/:id', component: BookGetComponent },
   { path: 'book/return/:id', component: BookReturnComponent },
+  { path: 'users', component: UsersListComponent },
 
   { path: '**',    component: NoContentComponent },
 ];

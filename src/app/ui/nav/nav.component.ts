@@ -19,6 +19,7 @@ export class NavComponent {
         this.links.push({ path: './', title: 'Home' });
         this.links.push({ path: './books', title: 'Books' });
         this.links.push({ path: './book/new', title: 'Add Book' });
+        this.links.push({ path: './users', title: 'Users' });
 
     }
 }

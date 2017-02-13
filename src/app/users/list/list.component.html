@@ -1,0 +1,18 @@
+<app-loading *ngIf="loading"></app-loading>
+<h1 *ngIf="!loading">Users</h1>
+<table class="table" *ngIf="!loading">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Phone</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let u of users">
+            <td>{{u.name}}</td>
+            <td>{{u.address}}</td>
+            <td>{{u.phone}}</td>
+        </tr>
+    </tbody>
+</table>
