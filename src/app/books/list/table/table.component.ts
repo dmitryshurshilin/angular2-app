@@ -1,8 +1,8 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-    selector: 'books-table',  // <books-table></books-table>
-    styleUrls: [ './table.component.css' ],
+    selector: 'books-table',
+    styleUrls: [ '../../../styles/table.css' ],
     templateUrl: './table.component.html'
 })
 export class BooksTableComponent {
