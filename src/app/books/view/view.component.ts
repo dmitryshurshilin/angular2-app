@@ -20,9 +20,7 @@ export class BookViewComponent {
 
     ngOnInit() {
         this.sub = this.route.params.subscribe(params => {
-            this.bookService.getBook(+params['id']).subscribe((book) => {
-                this.book = book;
-            });
+            this.bookService.getBook(+params['id']).subscribe(book => this.book = book);
         });
     }
 

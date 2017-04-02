@@ -1,7 +1,7 @@
 <ng-template #loading>
     <app-loading></app-loading>
 </ng-template>
-<h1 *ngIf="book; else loading">{{book.title}} <a [routerLink]="['/book/edit/', book.id]" class="icon"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></h1>
+<h1 *ngIf="book">{{book.title}} <a [routerLink]="['/book/edit/', book.id]" class="icon"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></h1>
 <div class="details" *ngIf="book; else loading">
     <div class="details__row">
         <div class="details__label">Name</div>
