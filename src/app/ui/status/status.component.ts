@@ -14,14 +14,16 @@ import { Component, Input, OnInit } from '@angular/core';
     `],
     template: `
         <div class="book-status">
-            <div *ngIf="availability">
+            <div *ngIf="availability; else unavailable">
                 <span *ngIf="info">Available</span>
                 <a [routerLink]="['/book/get/', id]" class="book-status__link" *ngIf="actions">Get</a>
             </div>
-            <div *ngIf="!availability">
-                <span *ngIf="info">Unavailable</span>
-                <a [routerLink]="['/book/return/', id]" class="book-status__link" *ngIf="actions">Return</a>
-            </div>
+            <ng-template #unavailable>
+                <div>
+                    <span *ngIf="info">Unavailable</span>
+                    <a [routerLink]="['/book/return/', id]" class="book-status__link" *ngIf="actions">Return</a>
+                </div>
+            </ng-template>
         </div>`
 })
 export class StatusComponent implements OnInit {
