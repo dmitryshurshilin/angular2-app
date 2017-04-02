@@ -15,7 +15,6 @@ export class BooksListComponent implements OnInit {
     filterParams: IFilterParams;
 
     books: Array<Object>;
-    loading: Boolean;
 
     constructor(private bookService: BookService) {
 
@@ -29,11 +28,9 @@ export class BooksListComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.loading = true;
         this.bookService.getBooks()
             .subscribe((books) => {
                     this.books = books;
-                    this.loading = false;
                 }
             );
     }
