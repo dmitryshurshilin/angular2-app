@@ -9,14 +9,11 @@ import { UsersService } from '../service';
 export class UsersListComponent {
 
     users: Array<Object>;
-    loading: Boolean;
 
     constructor(private usersService: UsersService) {
-        this.loading = true;
         this.usersService.getUsers()
             .subscribe((books) => {
                     this.users = books;
-                    this.loading = false;
                 }
             );
     }
