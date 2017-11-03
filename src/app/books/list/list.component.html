@@ -1,5 +1,5 @@
 <ng-template #loading>
-    <app-loading></app-loading>
+    <app-loading #loading></app-loading>
 </ng-template>
 <div *ngIf="books; else loading">
     <books-filter [filterParams]="filterParams" (onFilterChanged)="filterWasChanged($event)"></books-filter>

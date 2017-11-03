@@ -35,7 +35,6 @@ export class BookEditComponent {
     }
 
     ngOnInit() {
-        this.loading = true;
         this.sub = this.route.params.subscribe(params => {
             this.id = +params['id'];
             this.bookService.getBook(this.id).subscribe((book: any) => {
@@ -46,7 +45,6 @@ export class BookEditComponent {
                 this.editForm.controls['description'].setValue(book.description);
                 this.editForm.controls['buy'].setValue(book.buy);
                 this.editForm.controls['status'].setValue(book.status);
-                this.loading = false;
             });
         });
     }
