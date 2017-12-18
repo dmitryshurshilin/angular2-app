@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Http, Response } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
+import { Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 
 @Injectable()
@@ -7,19 +8,19 @@ export class UsersService {
 
     private dataUrl = 'http://localhost:3001/users';
 
-    constructor(private http: Http) {}
+    constructor(private httpClient: HttpClient) {}
 
-    getUsers(): Observable<any[]>  {
-        return this.http.get(this.dataUrl)
+    getUsers(): Observable<any>  {
+        return this.httpClient.get(this.dataUrl)
             .map((res: Response) => {
-                return res.json();
+                return res;
             });
     }
 
-    getUser(id: number): Observable<any[]>  {
-        return this.http.get(this.dataUrl + '/' + id)
+    getUser(id: number): Observable<any>  {
+        return this.httpClient.get(this.dataUrl + '/' + id)
             .map((res: Response) => {
-                return res.json();
+                return res;
             });
     }
 
